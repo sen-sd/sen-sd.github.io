@@ -1,9 +1,9 @@
-// Individual blog post page functionality
+// Individual blog post page functionality - now using Markdown files
 async function loadBlogPost() {
     const urlParams = new URLSearchParams(window.location.search);
-    const postId = urlParams.get('id');
+    const filename = urlParams.get('file');
 
-    if (!postId) {
+    if (!filename) {
         document.getElementById('blogPostContent').innerHTML = `
             <div class="loading">
                 <p>Post not found. <a href="blog.html">Return to blog</a></p>
@@ -12,23 +12,19 @@ async function loadBlogPost() {
         return;
     }
 
+    // Load markdown utils first
+    if (typeof fetchMarkdownPost === 'undefined') {
+        const script = document.createElement('script');
+        script.src = 'markdown-utils.js';
+        await new Promise((resolve, reject) => {
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.appendChild(script);
+        });
+    }
+
     try {
-        const response = await fetch('blog-data.json');
-        if (!response.ok) {
-            throw new Error('Failed to load blog data');
-        }
-
-        const blogData = await response.json();
-        const post = blogData.posts.find(p => p.id === postId);
-
-        if (!post) {
-            document.getElementById('blogPostContent').innerHTML = `
-                <div class="loading">
-                    <p>Post not found. <a href="blog.html">Return to blog</a></p>
-                </div>
-            `;
-            return;
-        }
+        const post = await fetchMarkdownPost(filename);
 
         // Update page title and meta
         document.getElementById('postTitle').textContent = `${post.title} - Sen SD`;
@@ -75,4 +71,3 @@ async function loadBlogPost() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', loadBlogPost);
-

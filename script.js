@@ -93,21 +93,25 @@ async function loadGitHubActivity() {
     }
 }
 
-// Load blog preview on homepage
+// Load blog preview on homepage - now using Markdown files
 async function loadBlogPreview() {
     const previewContainer = document.getElementById('blogPreview');
     if (!previewContainer) return;
 
-    try {
-        const response = await fetch('blog-data.json');
-        if (!response.ok) {
-            throw new Error('Failed to load blog data');
-        }
+    // Load markdown utils first
+    if (typeof fetchAllPosts === 'undefined') {
+        const script = document.createElement('script');
+        script.src = 'markdown-utils.js';
+        await new Promise((resolve, reject) => {
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.appendChild(script);
+        });
+    }
 
-        const blogData = await response.json();
-        const latestPosts = blogData.posts
-            .sort((a, b) => new Date(b.date) - new Date(a.date))
-            .slice(0, 3);
+    try {
+        const allPosts = await fetchAllPosts();
+        const latestPosts = allPosts.slice(0, 3);
 
         if (latestPosts.length === 0) {
             previewContainer.innerHTML = '<p>No blog posts available yet.</p>';
@@ -123,7 +127,7 @@ async function loadBlogPreview() {
             });
 
             return `
-                <a href="blog-post.html?id=${post.id}" class="blog-card">
+                <a href="blog-post.html?file=${encodeURIComponent(post.filename)}" class="blog-card">
                     <div class="blog-card-header">
                         <span class="blog-card-category">${post.category}</span>
                         <h3 class="blog-card-title">${post.title}</h3>
@@ -161,4 +165,3 @@ document.addEventListener('DOMContentLoaded', () => {
     loadGitHubActivity();
     loadBlogPreview();
 });
-

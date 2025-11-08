@@ -1,4 +1,4 @@
-// Blog listing page functionality
+// Blog listing page functionality - now using Markdown files
 let allPosts = [];
 let filteredPosts = [];
 
@@ -6,14 +6,19 @@ async function loadBlogPosts() {
     const postsContainer = document.getElementById('blogPosts');
     if (!postsContainer) return;
 
-    try {
-        const response = await fetch('blog-data.json');
-        if (!response.ok) {
-            throw new Error('Failed to load blog data');
-        }
+    // Load markdown utils first
+    if (typeof fetchAllPosts === 'undefined') {
+        const script = document.createElement('script');
+        script.src = 'markdown-utils.js';
+        await new Promise((resolve, reject) => {
+            script.onload = resolve;
+            script.onerror = reject;
+            document.head.appendChild(script);
+        });
+    }
 
-        const blogData = await response.json();
-        allPosts = blogData.posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+    try {
+        allPosts = await fetchAllPosts();
         filteredPosts = allPosts;
 
         renderPosts();
@@ -43,7 +48,7 @@ function renderPosts() {
         });
 
         return `
-            <a href="blog-post.html?id=${post.id}" class="blog-card">
+            <a href="blog-post.html?file=${encodeURIComponent(post.filename)}" class="blog-card">
                 <div class="blog-card-header">
                     <span class="blog-card-category">${post.category}</span>
                     <h3 class="blog-card-title">${post.title}</h3>
@@ -83,4 +88,3 @@ function setupFilters() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', loadBlogPosts);
-
