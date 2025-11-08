@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Sen SD | Technical Tips & Insights</title>
+    <meta name="description" content="Technical blog posts, daily tips, and insights from 20 years of software engineering experience">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Sen SD</a>
+            <ul class="nav-menu">
+                <li><a href="/#about">About</a></li>
+                <li><a href="/#experience">Experience</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="/#github">GitHub</a></li>
+                <li><a href="/#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section blog-header">
+            <div class="container">
+                <h1 class="page-title">Technical Blog</h1>
+                <p class="page-subtitle">Daily tips, insights, and lessons from 20 years of software engineering</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <div class="blog-filters">
+                    <button class="filter-btn active" data-filter="all">All Posts</button>
+                    <button class="filter-btn" data-filter="tips">Daily Tips</button>
+                    <button class="filter-btn" data-filter="tutorial">Tutorials</button>
+                    <button class="filter-btn" data-filter="insights">Insights</button>
+                </div>
+                <div id="blogPosts" class="blog-posts">
+                    <!-- Blog posts will be loaded here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Sen SD. All rights reserved.</p>
+            <p>Built with ❤️ using GitHub Pages</p>
+        </div>
+    </footer>
+
+    <script src="blog.js"></script>
+</body>
+</html>
+
