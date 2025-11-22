@@ -412,6 +412,23 @@ code, pre, .code-block {
     padding-left: 0;
 }
 
+/* Profile Sections */
+.profile-section {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 2.5rem;
+    margin-top: 1.5rem;
+}
+
+.profile-section .section-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin: 0 0 2rem 0;
+    text-align: left;
+}
+
 /* Buttons */
 .btn {
     display: inline-flex;
