@@ -1,7 +1,7 @@
 {
   "posts": [
-    "2025-11-22_deploy-aspnet-production-windows-service.md",
     "2025-11-21_upload-onprem-data-to-cloud-security.md",
-    "2025-11-18_secure-file-transfer-without-sdks.md"
+    "2025-11-18_secure-file-transfer-without-sdks.md",
+    "2024-10-22_deploy-aspnet-production-windows-service.md"
   ]
 }
