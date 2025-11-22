@@ -81,7 +81,3 @@ Optional add-ons include:
 - REST API for automation
 - Comprehensive logging and monitoring
 
----
-
-pfSense provides enterprise-grade network security without the enterprise price tag, making it an excellent choice for organizations of all sizes.
-
