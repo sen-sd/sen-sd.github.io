@@ -465,6 +465,15 @@ code, pre, .code-block {
 .page-subtitle {
     font-size: 1.2rem;
     opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.blog-header .hero-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .blog-filters {
