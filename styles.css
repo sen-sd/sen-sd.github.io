@@ -159,6 +159,8 @@ code, pre, .code-block {
     transition: var(--transition);
     color: var(--text-color);
     padding: 0;
+    position: relative;
+    z-index: 10;
 }
 
 .theme-toggle:hover {
@@ -167,8 +169,13 @@ code, pre, .code-block {
     transform: scale(1.1);
 }
 
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
 .theme-toggle i {
     font-size: 1.1rem;
+    pointer-events: none;
 }
 
 /* Hero Section */

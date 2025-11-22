@@ -2,7 +2,8 @@
 (function() {
     'use strict';
     
-    function updateThemeIcon(theme, iconElement) {
+    function updateThemeIcon(theme) {
+        const iconElement = document.getElementById('themeIcon');
         if (iconElement) {
             if (theme === 'dark') {
                 iconElement.classList.remove('fa-moon');
@@ -14,42 +15,33 @@
         }
     }
     
-    function initTheme() {
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = document.getElementById('themeIcon');
+    function toggleTheme() {
         const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-theme') || 'dark';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
         
-        if (!html) {
-            console.error('HTML element not found');
-            return;
-        }
+        html.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        updateThemeIcon(newTheme);
+    }
+    
+    function initTheme() {
+        const html = document.documentElement;
+        const themeToggle = document.getElementById('themeToggle');
         
         // Get saved theme or default to dark
         const savedTheme = localStorage.getItem('theme') || 'dark';
         html.setAttribute('data-theme', savedTheme);
-        updateThemeIcon(savedTheme, themeIcon);
+        updateThemeIcon(savedTheme);
         
+        // Set up click handler
         if (themeToggle) {
-            // Remove any existing listeners by cloning the button
-            const newToggle = themeToggle.cloneNode(true);
-            themeToggle.parentNode.replaceChild(newToggle, themeToggle);
-            
-            // Add click event listener
-            newToggle.addEventListener('click', function(e) {
+            themeToggle.onclick = function(e) {
                 e.preventDefault();
                 e.stopPropagation();
-                
-                const currentTheme = html.getAttribute('data-theme');
-                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-                
-                html.setAttribute('data-theme', newTheme);
-                localStorage.setItem('theme', newTheme);
-                
-                const icon = document.getElementById('themeIcon');
-                updateThemeIcon(newTheme, icon);
-            });
-        } else {
-            console.warn('Theme toggle button not found');
+                toggleTheme();
+                return false;
+            };
         }
     }
     
@@ -57,7 +49,6 @@
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initTheme);
     } else {
-        // DOM is already ready
         initTheme();
     }
 })();
