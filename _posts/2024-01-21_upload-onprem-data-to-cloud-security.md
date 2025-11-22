@@ -47,18 +47,3 @@ When choosing between Azure Storage Mover and AWS DataSync, consider:
 3. **Compliance requirements** - Both support encryption and private connectivity, but verify specific compliance needs
 4. **Cost structure** - Evaluate transfer costs, storage costs, and agent deployment requirements
 
-## Security Best Practices
-
-Regardless of which solution you choose:
-
-- Always enable encryption in transit (TLS/HTTPS)
-- Use identity-based authentication (Azure AD or IAM) instead of shared keys
-- Implement Private Endpoints or VPC connectivity for sensitive data
-- Monitor and audit all data transfer activities
-- Use incremental sync to minimize transfer time and costs
-- Implement proper access controls at the destination storage
-
-## Conclusion
-
-Both Azure Storage Mover and AWS DataSync provide enterprise-grade security for moving on-premises data to the cloud. The choice depends on your cloud provider, data volume, and specific security requirements. For medical imaging (DICOM) and other sensitive workloads, these managed services eliminate the need for custom scripts while ensuring compliance and security.
-
