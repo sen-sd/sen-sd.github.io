@@ -81,52 +81,7 @@ X-Amz-Signature=XXXXXXXXXXXXXXXX
   - Valid for a **short period** (e.g., 10 minutes)
 - Original storage keys or IAM credentials **never leave** your secure backend.
 
-## 4. Disadvantages and Security Risks
-
-While SAS URLs and pre-signed URLs offer convenience, they come with important security considerations:
-
-### 4.1 URL Exposure Risk
-
-SAS URLs and AWS pre-signed URLs are bearer tokens. Anyone who obtains the URL can use it until it expires. If the URL is:
-- Logged in server logs or application logs
-- Shared via insecure channels (email, chat)
-- Exposed in browser history or network traces
-- Intercepted during transmission
-
-The URL can be used by unauthorized parties to access your storage.
-
-### 4.2 No Immediate Revocation
-
-Once issued, you cannot revoke a SAS or presigned URL. You must wait for expiration unless you rotate keys (which affects the entire system). This means:
-- If a URL is compromised, you cannot immediately stop access
-- Key rotation impacts all active URLs, potentially disrupting legitimate operations
-- You must rely solely on expiration time for access control
-
-### 4.3 MITM via TLS Inspection
-
-If TLS/HTTPS interception is enabled (pfSense, Sophos, Fortigate, corporate proxies), the proxy can read and misuse the URL and the uploaded/downloaded data. This is particularly risky in:
-- Corporate environments with SSL inspection
-- Network security appliances that decrypt HTTPS traffic
-- Man-in-the-middle scenarios where the proxy has access to both the URL and data
-
-### 4.4 Overwrite/Tampering Risk
-
-Incorrect permissions (e.g., giving write/read instead of write-only) can allow replacing existing files or injecting malicious data. This risk includes:
-- Accidental overwrites of critical files
-- Malicious data injection if URLs are compromised
-- Unauthorized modifications to existing storage objects
-
-### 4.5 Expiry Time Miscalculation
-
-If upload takes longer than the SAS/presigned expiry, the file upload fails, causing partial or missing data. This is critical for:
-- **DICOM workflows** where incomplete medical images can cause diagnostic errors
-- Large file transfers that exceed the expiration window
-- Network interruptions that delay upload completion
-- Batch operations where timing is unpredictable
-
-**Mitigation**: Always set expiry times longer than expected transfer duration, with buffer time for network issues.
-
-## 5. AWS Alternative to SAS: S3 Pre-Signed URL
+## 4. AWS Alternative to SAS: S3 Pre-Signed URL
 
 | Feature                     | Azure SAS URL (Blob)                                   | AWS S3 Pre-Signed URL                           |
 |----------------------------|--------------------------------------------------------|-------------------------------------------------|
@@ -135,7 +90,7 @@ If upload takes longer than the SAS/presigned expiry, the file upload fails, cau
 | Time-limited               | Yes                                                    | Yes                                            |
 | SDK required on client?    | No                                                     | No                                             |
 
-## 6. How to Download Using URL Only
+## 5. How to Download Using URL Only
 
 ### Azure Blob
 
@@ -149,7 +104,7 @@ curl -L -o output.dcm "https://<account>.blob.core.windows.net/<container>/<blob
 curl -o file.zip "https://<bucket>.s3.amazonaws.com/path/file.zip?<signature>"
 ```
 
-## 7. How to Upload Using URL Only
+## 6. How to Upload Using URL Only
 
 ### Azure Blob PUT
 
@@ -163,7 +118,7 @@ curl -X PUT -T myfile.dcm -H "x-ms-blob-type: BlockBlob" "https://<account>.blob
 curl -X PUT --upload-file myfile.dcm "https://<bucket>.s3.amazonaws.com/path/myfile.dcm?<signature>"
 ```
 
-## 8. PowerShell Examples
+## 7. PowerShell Examples
 
 ### Download
 
@@ -176,6 +131,51 @@ Invoke-WebRequest -Uri $uri -OutFile $out
 ```powershell
 Invoke-WebRequest -Uri $uri -Method Put -InFile $file
 ```
+
+## 8. Disadvantages and Security Risks
+
+While SAS URLs and pre-signed URLs offer convenience, they come with important security considerations:
+
+### 8.1 URL Exposure Risk
+
+SAS URLs and AWS pre-signed URLs are bearer tokens. Anyone who obtains the URL can use it until it expires. If the URL is:
+- Logged in server logs or application logs
+- Shared via insecure channels (email, chat)
+- Exposed in browser history or network traces
+- Intercepted during transmission
+
+The URL can be used by unauthorized parties to access your storage.
+
+### 8.2 No Immediate Revocation
+
+Once issued, you cannot revoke a SAS or presigned URL. You must wait for expiration unless you rotate keys (which affects the entire system). This means:
+- If a URL is compromised, you cannot immediately stop access
+- Key rotation impacts all active URLs, potentially disrupting legitimate operations
+- You must rely solely on expiration time for access control
+
+### 8.3 MITM via TLS Inspection
+
+If TLS/HTTPS interception is enabled (pfSense, Sophos, Fortigate, corporate proxies), the proxy can read and misuse the URL and the uploaded/downloaded data. This is particularly risky in:
+- Corporate environments with SSL inspection
+- Network security appliances that decrypt HTTPS traffic
+- Man-in-the-middle scenarios where the proxy has access to both the URL and data
+
+### 8.4 Overwrite/Tampering Risk
+
+Incorrect permissions (e.g., giving write/read instead of write-only) can allow replacing existing files or injecting malicious data. This risk includes:
+- Accidental overwrites of critical files
+- Malicious data injection if URLs are compromised
+- Unauthorized modifications to existing storage objects
+
+### 8.5 Expiry Time Miscalculation
+
+If upload takes longer than the SAS/presigned expiry, the file upload fails, causing partial or missing data. This is critical for:
+- **DICOM workflows** where incomplete medical images can cause diagnostic errors
+- Large file transfers that exceed the expiration window
+- Network interruptions that delay upload completion
+- Batch operations where timing is unpredictable
+
+**Mitigation**: Always set expiry times longer than expected transfer duration, with buffer time for network issues.
 
 ## 9. Summary
 
