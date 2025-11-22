@@ -125,6 +125,7 @@ code, pre, .code-block {
     font-weight: bold;
     color: var(--primary-color);
     text-decoration: none;
+    display: none;
 }
 
 .nav-menu {
