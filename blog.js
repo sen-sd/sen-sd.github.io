@@ -6,10 +6,15 @@ async function loadBlogPosts() {
     const postsContainer = document.getElementById('blogPosts');
     if (!postsContainer) return;
 
+    // Determine base path based on current page location
+    const isInPages = window.location.pathname.includes('/pages/');
+    const basePath = isInPages ? '../' : '';
+    const blogPostPath = isInPages ? 'blog-post.html' : 'pages/blog-post.html';
+
     // Load markdown utils first
     if (typeof fetchAllPosts === 'undefined') {
         const script = document.createElement('script');
-        script.src = '../markdown-utils.js';
+        script.src = basePath + 'markdown-utils.js';
         await new Promise((resolve, reject) => {
             script.onload = resolve;
             script.onerror = reject;
@@ -21,7 +26,7 @@ async function loadBlogPosts() {
         allPosts = await fetchAllPosts();
         filteredPosts = allPosts;
 
-        renderPosts();
+        renderPosts(blogPostPath);
         setupFilters();
 
     } catch (error) {
@@ -30,7 +35,7 @@ async function loadBlogPosts() {
     }
 }
 
-function renderPosts() {
+function renderPosts(blogPostPath = 'blog-post.html') {
     const postsContainer = document.getElementById('blogPosts');
     if (!postsContainer) return;
 
@@ -49,7 +54,7 @@ function renderPosts() {
 
         const categoryUpper = post.category.toUpperCase();
         return `
-            <a href="blog-post.html?file=${encodeURIComponent(post.filename)}" class="blog-card">
+            <a href="${blogPostPath}?file=${encodeURIComponent(post.filename)}" class="blog-card">
                 <div class="blog-card-header">
                     <span class="blog-card-category">${categoryUpper}</span>
                     <h3 class="blog-card-title">${post.title}</h3>
