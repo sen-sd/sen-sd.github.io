@@ -1,7 +1,7 @@
 ---
 title: "How to Deploy an ASP.NET Application to Production Environment"
 category: tutorial
-date: 2024-10-22
+date: 2025-11-22
 excerpt: "Learn how to deploy ASP.NET applications as Windows Services for reliable, automatic startup in production environments without manual intervention."
 readTime: 8
 ---
