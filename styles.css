@@ -514,10 +514,12 @@ code, pre, .code-block {
 .blog-post-content {
     max-width: 800px;
     margin: 0 auto;
-    background: white;
+    background: var(--bg-color);
     padding: 3rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
 .blog-post-header {
