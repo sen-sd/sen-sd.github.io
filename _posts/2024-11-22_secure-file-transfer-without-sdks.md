@@ -1,7 +1,7 @@
 ---
 title: "Secure File Transfer without SDKs"
 category: Cloud
-date: 2024-11-21
+date: 2025-11-18
 excerpt: "Learn how to use SAS URLs (Azure) and Pre-Signed URLs (AWS S3) with simple tools like curl for secure file transfers without installing heavy SDKs."
 readTime: 10
 ---
