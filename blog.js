@@ -70,6 +70,11 @@ function renderPosts(blogPostPath = 'blog-post.html') {
 
 function setupFilters() {
     const filterButtons = document.querySelectorAll('.filter-btn');
+    if (filterButtons.length === 0) return; // No filters on homepage
+    
+    // Determine blog post path
+    const isInPages = window.location.pathname.includes('/pages/');
+    const blogPostPath = isInPages ? 'blog-post.html' : 'pages/blog-post.html';
     
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
@@ -87,7 +92,7 @@ function setupFilters() {
                 );
             }
 
-            renderPosts();
+            renderPosts(blogPostPath);
         });
     });
 }
