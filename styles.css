@@ -754,16 +754,50 @@ code, pre, .code-block {
     margin: 0 auto;
 }
 
-.activity-item {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: var(--shadow);
-    margin-bottom: 1rem;
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-}
+    .hero {
+        padding: 3rem 0;
+        min-height: 300px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 20px;
+    }
+
+    .hero-name {
+        font-size: 2.5rem;
+    }
+
+    .hero-badge span {
+        font-size: 1rem;
+    }
+
+    .hero-contact {
+        font-size: 0.85rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .hero-contact .separator {
+        display: none;
+    }
+
+    .hero-right {
+        display: none;
+    }
+
+    .activity-item {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 0.5rem;
+        box-shadow: var(--shadow);
+        margin-bottom: 1rem;
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+    }
 
 .activity-icon {
     color: var(--primary-color);
