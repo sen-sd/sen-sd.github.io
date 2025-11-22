@@ -47,10 +47,11 @@ function renderPosts() {
             day: 'numeric' 
         });
 
+        const categoryUpper = post.category.toUpperCase();
         return `
             <a href="blog-post.html?file=${encodeURIComponent(post.filename)}" class="blog-card">
                 <div class="blog-card-header">
-                    <span class="blog-card-category">${post.category}</span>
+                    <span class="blog-card-category">${categoryUpper}</span>
                     <h3 class="blog-card-title">${post.title}</h3>
                     <div class="blog-card-date">${formattedDate}</div>
                 </div>
