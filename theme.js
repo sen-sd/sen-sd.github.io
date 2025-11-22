@@ -4,8 +4,8 @@ function initTheme() {
     const themeIcon = document.getElementById('themeIcon');
     const html = document.documentElement;
     
-    // Get saved theme or default to light
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    // Get saved theme or default to dark
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     html.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme, themeIcon);
     

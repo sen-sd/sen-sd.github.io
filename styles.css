@@ -108,7 +108,7 @@ code, pre, .code-block {
     top: 0;
     z-index: 1000;
     backdrop-filter: blur(10px);
-    background: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.3s ease;
 }
 
 .nav-container {
@@ -385,7 +385,7 @@ code, pre, .code-block {
 }
 
 .blog-card {
-    background: white;
+    background: var(--bg-color);
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -393,6 +393,7 @@ code, pre, .code-block {
     text-decoration: none;
     color: inherit;
     display: block;
+    border: 1px solid var(--border-color);
 }
 
 .blog-card:hover {
@@ -469,11 +470,12 @@ code, pre, .code-block {
 .filter-btn {
     padding: 0.5rem 1.5rem;
     border: 2px solid var(--border-color);
-    background: white;
+    background: var(--bg-color);
     border-radius: 2rem;
     cursor: pointer;
     transition: var(--transition);
     font-weight: 500;
+    color: var(--text-color);
 }
 
 .filter-btn:hover,
@@ -695,13 +697,14 @@ code, pre, .code-block {
     align-items: center;
     gap: 0.5rem;
     padding: 1.5rem 2rem;
-    background: white;
+    background: var(--bg-color);
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
     text-decoration: none;
     color: var(--text-color);
     transition: var(--transition);
     min-width: 150px;
+    border: 1px solid var(--border-color);
 }
 
 .contact-link:hover {
@@ -720,11 +723,13 @@ code, pre, .code-block {
 
 /* Footer */
 .footer {
-    background: var(--text-color);
-    color: white;
+    background: var(--bg-color);
+    color: var(--text-color);
     text-align: center;
     padding: 2rem 0;
     margin-top: 4rem;
+    border-top: 1px solid var(--border-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .footer p {
