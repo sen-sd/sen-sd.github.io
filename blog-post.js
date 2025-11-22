@@ -15,7 +15,7 @@ async function loadBlogPost() {
     // Load markdown utils first
     if (typeof fetchMarkdownPost === 'undefined') {
         const script = document.createElement('script');
-        script.src = 'markdown-utils.js';
+        script.src = '../markdown-utils.js';
         await new Promise((resolve, reject) => {
             script.onload = resolve;
             script.onerror = reject;

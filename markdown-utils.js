@@ -44,7 +44,9 @@ function parseFrontmatter(content) {
  */
 async function fetchMarkdownPost(filename) {
     try {
-        const response = await fetch(`_posts/${filename}`);
+        // Determine base path based on current page location
+        const basePath = window.location.pathname.includes('/pages/') ? '../' : '';
+        const response = await fetch(`${basePath}_posts/${filename}`);
         if (!response.ok) {
             throw new Error(`Failed to fetch ${filename}`);
         }
@@ -81,8 +83,10 @@ async function fetchMarkdownPost(filename) {
  */
 async function fetchAllPosts() {
     try {
+        // Determine base path based on current page location
+        const basePath = window.location.pathname.includes('/pages/') ? '../' : '';
         // First, get the list of posts
-        const listResponse = await fetch('posts-list.json');
+        const listResponse = await fetch(`${basePath}posts-list.json`);
         if (!listResponse.ok) {
             throw new Error('Failed to fetch posts list');
         }

@@ -32,7 +32,7 @@ async function loadBlogPreview() {
             });
 
             return `
-                <a href="blog-post.html?file=${encodeURIComponent(post.filename)}" class="blog-card">
+                <a href="pages/blog-post.html?file=${encodeURIComponent(post.filename)}" class="blog-card">
                     <div class="blog-card-header">
                         <span class="blog-card-category">${post.category}</span>
                         <h3 class="blog-card-title">${post.title}</h3>
