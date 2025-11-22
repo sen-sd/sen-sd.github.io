@@ -1,7 +1,7 @@
 ---
 title: "How to Upload On-Prem Data to the Cloud with Security"
-category: tutorial
-date: 2024-01-21
+category: Cloud
+date: 2024-11-21
 excerpt: "Secure methods for transferring data from on-premises environments to Azure and AWS cloud storage, with examples and best practices."
 readTime: 8
 ---
