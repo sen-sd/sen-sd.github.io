@@ -8,6 +8,8 @@ readTime: 5
 
 ## 🌊 A Day to Remember
 
+![Family Trip in Paravur](/assets/images/family_pic_2024_Oct.jpeg)
+
 Recently, we had an amazing family trip to Paravur, and it was one of those days that will stay with us forever. Sixteen of us—from grandparents to little ones—came together for a day filled with adventure, laughter, and beautiful memories.
 
 ## 🚣 What We Did
@@ -39,6 +41,8 @@ In our busy lives, it's easy to get caught up in work, responsibilities, and dai
 - **Nature** has a way of bringing people together
 
 ## 📸 Captured Memories
+
+![Family Group Photo](/assets/images/family_pic_2024_Oct.jpeg)
 
 We took plenty of photos to remember this day—group shots with everyone in their life jackets, individual moments of joy, and the beautiful scenery around us. These photos will be treasures we look back on for years to come.
 
