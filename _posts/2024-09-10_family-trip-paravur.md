@@ -8,8 +8,6 @@ readTime: 5
 
 ## 🌊 A Day to Remember
 
-![Family Trip in Paravur](/assets/images/family_pic_2024_Oct.jpeg)
-
 Recently, we had an amazing family trip to Paravur, and it was one of those days that will stay with us forever. Sixteen of us—from grandparents to little ones—came together for a day filled with adventure, laughter, and beautiful memories.
 
 ## 🚣 What We Did
