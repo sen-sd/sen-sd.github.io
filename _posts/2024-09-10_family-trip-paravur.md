@@ -40,7 +40,7 @@ In our busy lives, it's easy to get caught up in work, responsibilities, and dai
 
 ## 📸 Captured Memories
 
-![Family Group Photo](/assets/images/family_pic_2024_Oct.jpeg)
+<img src="/assets/images/family_pic_2024_Oct.jpeg" alt="Family Group Photo" style="max-width: 400px; width: 100%; height: auto; border-radius: 8px;">
 
 We took plenty of photos to remember this day—group shots with everyone in their life jackets, individual moments of joy, and the beautiful scenery around us. These photos will be treasures we look back on for years to come.
 
