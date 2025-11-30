@@ -47,7 +47,7 @@ Even though VMs were not running, the Virtual Switch alone was enough to take ov
 
 ## 📷 Demonstration — Wi-Fi Virtual Switch Causing Upload Failure
 
-![Hyper-V Virtual Switch Manager - Wi-Fi Adapter Configuration](/assets/images/hyper-v-virtual-switch-wifi-config.png)
+![Hyper-V Virtual Switch Manager - Wi-Fi Adapter Configuration](/assets/images/Hyper-V-Isue1-Case2.png)
 
 The screenshot above shows the Hyper-V Virtual Switch Manager with the External Virtual Switch bound to a Wi-Fi adapter (Intel Wi-Fi 6E AX211). This configuration causes the upload speed to collapse to around 1 Mbps, even when no VMs are running.
 

@@ -55,7 +55,13 @@ async function fetchMarkdownPost(filename) {
         const { frontmatter, content } = parseFrontmatter(markdown);
         
         // Convert markdown to HTML
-        const html = marked.parse(content);
+        let html = marked.parse(content);
+        
+        // Fix image paths if viewing from pages directory
+        if (window.location.pathname.includes('/pages/')) {
+            // Convert absolute paths starting with /assets/ to relative paths
+            html = html.replace(/src="\/assets\//g, 'src="../assets/');
+        }
         
         // Generate ID from filename (remove extension and date prefix)
         const id = filename.replace(/^\d{4}-\d{2}-\d{2}_/, '').replace(/\.md$/, '');
