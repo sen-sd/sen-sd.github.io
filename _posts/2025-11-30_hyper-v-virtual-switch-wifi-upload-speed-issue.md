@@ -86,3 +86,6 @@ Based on the test results, here are the recommended solutions:
 In Windows, the operating system normally selects the highest-speed network adapter available for internet communication.
 However, when a Hyper-V External Virtual Switch is mapped to the Wi-Fi adapter, this behavior changes — Windows continues to route traffic through the Wi-Fi adapter, even if faster 1G or 2.5G LAN adapters are available. 
 Be aware — mapping the Hyper-V External Virtual Switch to the Wi-Fi adapter can lead to severe upload problems.
+
+## 🔥 Short answer
+The issue does not happen on LAN because Ethernet adapters natively support Hyper-V virtualization and hardware offloading, while Wi-Fi adapters do not handle virtual switching efficiently, causing speed collapse
