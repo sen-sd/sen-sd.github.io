@@ -12,7 +12,7 @@ readTime: 8
 
 During our project, we set up a Client Application that transfers data to an Azure Ubuntu VM over an Azure VPN connection.
 
-In my PC, small files (around 5 KB) were transferred successfully.
+In my project PC, small files (around 5 KB) were transferred successfully.
 
 However, even a 2 MB file could not be transferred — the upload would freeze and eventually fail.
 
@@ -47,6 +47,10 @@ Even though VMs were not running, the Virtual Switch alone was enough to take ov
 
 ## 📷 Demonstration — Wi-Fi Virtual Switch Causing Upload Failure
 
+![Hyper-V Virtual Switch Manager - Wi-Fi Adapter Configuration](/assets/images/hyper-v-virtual-switch-wifi-config.png)
+
+The screenshot above shows the Hyper-V Virtual Switch Manager with the External Virtual Switch bound to a Wi-Fi adapter (Intel Wi-Fi 6E AX211). This configuration causes the upload speed to collapse to around 1 Mbps, even when no VMs are running.
+
 ## 🔧 Issue Summary
 
 When a Hyper-V External Virtual Switch is bound to a Wi-Fi adapter, download speed remains acceptable but upload speed drops dramatically to around 1 Mbps, resulting in failed transfers for applications that need continuous upload (VPN, file transfer, cloud backup, etc.)
@@ -74,25 +78,4 @@ Based on the test results, here are the recommended solutions:
 3. **Remove External Virtual Switch When Not Needed**: If you're not actively using VMs, consider removing the External Virtual Switch to restore full Wi-Fi performance.
 
 4. **Use Internal or Private Virtual Switch**: For scenarios where VMs don't need internet access, use Internal or Private Virtual Switch types instead of External.
-
-## 🔍 Why This Happens
-
-The Hyper-V External Virtual Switch creates a network bridge that intercepts network traffic at a low level. When bound to a Wi-Fi adapter, this bridge appears to introduce significant overhead specifically for upload operations, likely due to:
-
-- Additional packet processing in the bridge layer
-- Wi-Fi driver compatibility issues with Hyper-V's network virtualization
-- Buffer management differences between Wi-Fi and wired adapters
-
-Wired Ethernet adapters handle this bridge overhead much more efficiently, which is why the issue doesn't occur with them.
-
-## ✨ Key Takeaways
-
-- Hyper-V External Virtual Switches can impact network performance even when VMs are stopped
-- Wi-Fi adapters are particularly susceptible to upload speed degradation
-- Wired Ethernet adapters (1G/2.5G) work reliably with Hyper-V Virtual Switches
-- Always test network performance after configuring Hyper-V Virtual Switches
-
----
-
-*Have you encountered similar Hyper-V networking issues? Share your experience in the comments!*
 
