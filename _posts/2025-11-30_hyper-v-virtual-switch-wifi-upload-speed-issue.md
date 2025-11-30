@@ -59,13 +59,16 @@ When a Hyper-V External Virtual Switch is bound to a Wi-Fi adapter, download spe
 
 ## 📊 Test Result Summary Table
 
-| Case | Hyper-V Setup Description | Download (Mbps) | Upload (Mbps) | Result |
-|------|---------------------------|-----------------|---------------|--------|
-| Case 1 | No External Virtual Switch , Wi-Fi connected | 536 | 332 | ✅ No Issue |
-| Case 2 | External Virtual Switch bound to Wi-Fi adapter | 402 | 1 ⚠ | ⚠ Upload speed collapse |
-| Case 3 | External Virtual Switch bound to 1G Ethernet adapter | 365 | 310 | ✅ No Issue |
-| Case 4 | External Virtual Switch bound to 2.5G Ethernet adapter | 626 | 352 | ✅ No Issue |
-| Case 5 | Wi-Fi Virtual Switch + LAN cable (2.5G) plugged | 595 | 428 | ✅ No Issue |
+| Case       | Hyper-V External Virtual Switch          |    Wi-Fi    | 2.5G LAN | 1G LAN | Result      |
+| ---------- | ---------------------------------------- | :---------: | :------: | :----: | ----------- |
+| **Case 1** | **No**                                   |  ✔ (5 GHz)  |     ✖    |    ✖   | No Issue    |
+| **Case 2** | **Wi-Fi adapter**                        |  ✔ (5 GHz)  |     ✖    |    ✖   | ⚠ **Issue** |
+| **Case 3** | **1G LAN adapter**                       |      ✖      |     ✖    |    ✔   | No Issue    |
+| **Case 4** | **2.5G LAN adapter**                     |      ✖      |     ✔    |    ✖   | No Issue    |
+| **Case 5** | **2.5G LAN adapter**                     |  ✔ (5 GHz)  |     ✔    |    ✖   | No Issue    |
+| **Case 6** | **Wi-Fi adapter**                        |  ✔ (5 GHz)  |     ✖    |    ✔   | ⚠ **Issue** |
+| **Case 7** | **Wi-Fi adapter**                        |  ✔ (5 GHz)  |     ✔    |    ✔   | ⚠ **Issue** |
+| **Case 8** | **Wi-Fi adapter**                        |  ✔ (2.4 GHz)|     ✔    |    ✔   | No Issue    |
 
 ## 💡 Solutions
 
@@ -79,3 +82,7 @@ Based on the test results, here are the recommended solutions:
 
 4. **Use Internal or Private Virtual Switch**: For scenarios where VMs don't need internet access, use Internal or Private Virtual Switch types instead of External.
 
+## ✅ Final Conclusion
+In Windows, the operating system normally selects the highest-speed network adapter available for internet communication.
+However, when a Hyper-V External Virtual Switch is mapped to the Wi-Fi adapter, this behavior changes — Windows continues to route traffic through the Wi-Fi adapter, even if faster 1G or 2.5G LAN adapters are available. 
+Be aware — mapping the Hyper-V External Virtual Switch to the Wi-Fi adapter can lead to severe upload problems.
