@@ -69,6 +69,7 @@ When a Hyper-V External Virtual Switch is bound to a Wi-Fi adapter, download spe
 | **Case 6** | **Wi-Fi adapter**                        |  ✔ (5 GHz)  |     ✖    |    ✔   | ⚠ **Issue** |
 | **Case 7** | **Wi-Fi adapter**                        |  ✔ (5 GHz)  |     ✔    |    ✔   | ⚠ **Issue** |
 | **Case 8** | **Wi-Fi adapter**                        |  ✔ (2.4 GHz)|     ✔    |    ✔   | No Issue    |
+| **Case 9** | **Wi-Fi adapter**                        |  ✔ (2.4 GHz)|     ✖    |    ✖   | ⚠ **Issue** |
 
 ## 💡 Solutions
 
