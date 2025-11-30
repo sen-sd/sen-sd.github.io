@@ -64,3 +64,4 @@ Great leaders replace control with trust. They:
 
 A strong manager builds confidence—never destroys it.
 
+
