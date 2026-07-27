@@ -8,6 +8,11 @@ readTime: 4
 
 ## Overview
 
+<figure>
+  <img src="/assets/images/Microsoft_Defender/Windows_Defender_logo.png.webp" alt="Microsoft Defender logo">
+  <figcaption>Microsoft Defender for Endpoint</figcaption>
+</figure>
+
 **Microsoft Defender for Endpoint** can be installed on supported Linux distributions such as **Ubuntu**.
 
 However, it **cannot** be installed directly on **pfSense**, because pfSense is based on **FreeBSD**, not Linux. Microsoft Defender for Endpoint does not provide a supported agent for FreeBSD/pfSense.
