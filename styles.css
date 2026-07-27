@@ -636,6 +636,45 @@ code, pre, .code-block {
     font-style: italic;
 }
 
+.blog-post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0 2rem;
+    font-size: 0.95rem;
+    overflow-x: auto;
+    display: block;
+}
+
+.blog-post-body thead,
+.blog-post-body tbody {
+    display: table;
+    width: 100%;
+}
+
+.blog-post-body th,
+.blog-post-body td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    color: var(--text-light);
+}
+
+.blog-post-body th {
+    background: var(--bg-alt);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.blog-post-body td:last-child,
+.blog-post-body th:last-child {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.blog-post-body tbody tr:hover {
+    background: var(--bg-alt);
+}
+
 .blog-post-body p:has(> img) {
     text-align: center;
     margin: 1.75rem 0;

@@ -95,6 +95,29 @@ We discovered stations like **8.1, 8.2, 8.3**… Honestly, I started wondering:
 
 > “How many 8th Stations are there? Is this mountain using software version numbers?” 😄
 
+For anyone curious, here are the approximate elevations along the Yoshida Trail:
+
+| Station                               | Approx. elevation |
+| ------------------------------------- | ----------------: |
+| **5th Station (富士スバルライン五合目)**         |       **2,305 m** |
+| **6th Station**                       |       **2,390 m** |
+| **7th Station – Hanagoya**            |       **2,700 m** |
+| **7th Station – Hinodekan**           |       **2,720 m** |
+| **7th Station – Tomoekan**            |       **2,740 m** |
+| **7th Station – Kamaiwakan**          |       **2,790 m** |
+| **7th Station – Fuji Ichikan**        |       **2,800 m** |
+| **7th Station – Toriiso**             |       **2,900 m** |
+| **7th Station – Toyokan**             |       **3,000 m** |
+| **8th Station – Taishikan**           |       **3,100 m** |
+| **8th Station – Horaikan**            |       **3,150 m** |
+| **8th Station – Hakuunsou**           |       **3,200 m** |
+| **8th Station – Ganso-Muro**          |       **3,250 m** |
+| **Hon-8th Station – Tomoekan**        |       **3,400 m** |
+| **8.5th Station – Goraikokan**        |       **3,450 m** |
+| **9th Station**                       |       **3,600 m** |
+| **Summit / Yoshida Trail top**        | **about 3,710 m** |
+| **Mt. Fuji highest point, Kengamine** |       **3,776 m** |
+
 Every step became harder. Our legs were becoming heavier, our breathing became more difficult, and our confidence slowly disappeared.
 
 ## 🍜 The Higher You Go, the Higher the Prices Go
