@@ -636,6 +636,16 @@ code, pre, .code-block {
     font-style: italic;
 }
 
+.blog-post-body img {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    margin: 1.5rem auto;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow);
+}
+
 /* GitHub Activity */
 .github-activity {
     max-width: 900px;
