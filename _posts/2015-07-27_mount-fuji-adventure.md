@@ -1,7 +1,7 @@
 ---
 title: "My Mount Fuji Adventure: “We’ll Reach the Top in One Hour!” 😄🗻"
 category: Trips
-date: 2025-07-27
+date: 2015-07-27
 excerpt: "A night climb of Mount Fuji that started with one bold prediction, got interrupted by stations 8.1–8.3, expensive noodles, and a 4 AM sunrise — and somehow still ended with “WE ACHIEVED IT!”"
 readTime: 10
 ---
