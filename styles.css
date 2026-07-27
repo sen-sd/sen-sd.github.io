@@ -636,14 +636,41 @@ code, pre, .code-block {
     font-style: italic;
 }
 
+.blog-post-body p:has(> img) {
+    text-align: center;
+    margin: 1.75rem 0;
+}
+
+.blog-post-body figure {
+    display: block;
+    max-width: 640px;
+    margin: 1.75rem auto;
+    text-align: center;
+}
+
 .blog-post-body img {
     display: block;
-    max-width: 100%;
+    max-width: min(100%, 640px);
+    max-height: 420px;
     width: auto;
     height: auto;
-    margin: 1.5rem auto;
+    object-fit: contain;
+    margin: 0.5rem auto 0.75rem;
     border-radius: 0.5rem;
     box-shadow: var(--shadow);
+    background: var(--bg-alt);
+}
+
+.blog-post-body figure img {
+    margin: 0 auto 0.75rem;
+}
+
+.blog-post-body figcaption {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    font-style: italic;
+    line-height: 1.4;
+    padding: 0 0.5rem;
 }
 
 /* GitHub Activity */
