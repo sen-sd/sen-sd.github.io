@@ -123,3 +123,13 @@ The idea of **"simulate first, deploy second"** transformed our deployment appro
   <img src="/assets/images/Kumamoto-20260622/7_return_and_reached.jpeg" alt="Return trip after the Kumamoto hospital deployment">
   <figcaption>Return and reached — deployment complete</figcaption>
 </figure>
+
+<figure>
+  <img src="/assets/images/Kumamoto-20260622/8_return_success_selfi.jpeg" alt="Success selfie on the return flight after the hospital deployment">
+  <figcaption>Mission success selfie on the way home</figcaption>
+</figure>
+
+<figure>
+  <img src="/assets/images/Kumamoto-20260622/9_retun_boarding.jpeg" alt="Boarding the return flight after the Kumamoto deployment">
+  <figcaption>Boarding for the return flight</figcaption>
+</figure>
