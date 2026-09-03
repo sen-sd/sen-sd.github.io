@@ -134,6 +134,11 @@ By the time we reached the **9th Station**, we were extremely hungry and cold. S
 
 That cup noodle was probably the most delicious food I had ever eaten in my life!
 
+<figure>
+  <img src="/assets/images/Mt.Fuji.Trip_2015_July_27_28/cup-noodles.jpg" alt="Cup noodles">
+  <figcaption>Cup noodles on Mount Fuji — around 600 yen never tasted so good!</figcaption>
+</figure>
+
 I don't know whether the noodles were special, or whether my stomach was simply saying:
 
 > “Please give me anything. Even hot water is fine!” 😂

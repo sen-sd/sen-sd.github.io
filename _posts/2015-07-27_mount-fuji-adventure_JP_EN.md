@@ -172,13 +172,18 @@ Water and food became more and more expensive. At one point, I started thinking:
 
 そのカップ麺は、たぶん人生で一番おいしい食べ物でした！
 
-麺が特別だったのか、それともお腹がこう言っていたのか：
-
-> 「何でもいいからくれ。お湯だけでもいい！」😂
-
 By the time we reached the **9th Station**, we were extremely hungry and cold. So we bought a cup of noodles for around **600 yen**.
 
 That cup noodle was probably the most delicious food I had ever eaten in my life!
+
+<figure>
+  <img src="/assets/images/Mt.Fuji.Trip_2015_July_27_28/cup-noodles.jpg" alt="カップ麺 / Cup noodles">
+  <figcaption>富士山のカップ麺 — 600円がこんなにおいしいなんて！ / Cup noodles on Mount Fuji — around 600 yen never tasted so good!</figcaption>
+</figure>
+
+麺が特別だったのか、それともお腹がこう言っていたのか：
+
+> 「何でもいいからくれ。お湯だけでもいい！」😂
 
 I don't know whether the noodles were special, or whether my stomach was simply saying:
 
