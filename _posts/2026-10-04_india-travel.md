@@ -6,11 +6,8 @@ excerpt: "A travel diary arranged in the same flow as the photo filenames, from 
 readTime: 6
 ---
 
-## ✈️ A Personal Journey
+## ✈️ Journey
 
-This trip was very special to me. I felt excited, emotional, and happy at the same time. I was leaving India, but I was also carrying my memories and my family with me. I was moving toward Japan, and I could feel that this trip was not just about a place. It was about the feeling of being somewhere new while still holding on to home.
-
-日本語: この旅はとても特別でした。私は興奮と感動を同時に感じていました。インドを出て、日本へ向かう途中で、家族や思い出を心に持って進んでいました。これはただの旅行ではなく、家を離れながらも、まだ家の温かさを持ち続けているような旅でした。
 
 ## 1. A Gift from Japan
 
@@ -59,6 +56,12 @@ This image made me think about how every part of the journey matters. Every step
 This was a nice final image of the beginning. It felt like the trip had started properly, and I could feel the emotion of moving forward.
 
 日本語: 旅の始まりを締めくくるような一枚でした。ちゃんと始まった感じがして、前へ進んでいく気持ちが強くなりました。
+
+![Kerala memory](/assets/images/india-travel/2.6_Kerala.png)
+
+This photo made the trip feel even more alive. Kerala had such a calm and beautiful feeling, and I could really feel the warmth and richness of the place.
+
+日本語: この写真は旅の雰囲気をさらに強く感じさせてくれました。ケララはとても落ち着いた美しい場所で、そこにいるだけで温かさと豊かさを感じました。
 
 ## 4. Food from Home
 
@@ -177,9 +180,3 @@ I really enjoyed this moment. It was full of joy, culture, and togetherness. It 
 This photo reminded me that travel is not only about solo moments. It is also about being with people, sharing time, and making memories together.
 
 日本語: この写真は、一人でいる時間だけではなく、人と一緒に過ごす時間の大切さを教えてくれました。
-
-## 💭 Final Thought
-
-When I look at all these photos, I feel that this trip was very meaningful. I saw beautiful places, tasted good food, spent time with family, and felt the special connection between India and Japan. It was a trip I will remember for a long time.
-
-日本語: これらの写真を見返すと、この旅は本当に意味のある旅だったと感じます。美しい場所を見て、おいしい食べ物を食べて、家族と過ごして、日本とインドのつながりを感じました。長く大切に残る旅でした。
