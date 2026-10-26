@@ -2,19 +2,19 @@
 title: "Security vs. Usability: A Real-World Banking Experience as an NRI"
 category: insights
 date: 2026-10-26
-excerpt: "A year after a frustrating Canara Bank login, a broken password-visibility button was another reminder that small details decide whether secure software actually works for users."
+excerpt: "A year after a frustrating Canara Bank login, a missing password-visibility control was another reminder that small details decide whether secure software actually works for users."
 readTime: 6
 ---
 
-As a software developer, I believe that good software is not just about features and security; it is about how easily users can accomplish their goals.
+As a software developer, I believe that good software is not just about features and security; it is also about how easily users can accomplish their goals.
 
 Sometimes, real-world experiences teach us more about software quality than any textbook or design principle.
 
-## My experience with Canara Bank
+## My Experience with Canara Bank
 
 As an NRI (Non-Resident Indian) living abroad, I usually access net banking only once every two months or so.
 
-Around a year ago, I faced a frustrating experience while trying to log in to Canara Bank's net banking service. The system repeatedly asked me to provide additional details, including my IFSC code, account number, and Aadhaar number.
+Around a year ago, I had a frustrating experience while trying to log in to Canara Bank's net banking service. The system repeatedly asked me to provide additional details, including my IFSC code, account number, and Aadhaar number.
 
 Even after submitting the requested information, I continued to face difficulties accessing my account. When I wanted to perform a simple task, such as opening a new fixed deposit, I couldn't complete the process smoothly.
 
@@ -22,45 +22,67 @@ I understand that banking security is critical. However, repeatedly going throug
 
 Eventually, I decided to move my banking activities to SBI, where I found the online banking experience smoother and more convenient for my needs.
 
-## One year later… another small UX issue!
+## One Year Later: Another Small UX Observation
 
-Today, I checked the Canara Bank login screen again. I noticed that even the password visibility button — the little button that allows users to see what they have typed — was not working! 🙂
+Today, I checked the Canara Bank login screen again and noticed something else: I couldn't find a password-visibility option to show or hide the password while typing.
 
-It might seem like a minor issue, but these small details can significantly affect the overall user experience.
+It might seem like a small detail, but showing or hiding a password is a simple yet useful feature, particularly when entering a long or complex password or correcting a typing mistake.
 
-When users cannot verify their passwords easily, even a simple login becomes unnecessarily difficult. For customers who access the service only occasionally, these little frustrations can make the experience even worse.
+This feature is also useful when changing a password, as users can verify what they have entered before submitting it. 🙂
 
-Of course, one observation does not tell us everything about a banking platform. But it does raise an important question: Are we paying enough attention to the small details that matter to users?
+<figure>
+  <img src="/assets/images/online-banking/CaneraBank-no-Password-View-Option.png" alt="Canara Bank net banking login screen without a visible password-visibility control">
+  <figcaption>Canara Bank login — I couldn't find a show-password control on the screen I checked.</figcaption>
+</figure>
 
-## What can we learn as software developers?
+<figure>
+  <img src="/assets/images/online-banking/sbi-bank-password-view-option.png" alt="SBI net banking login screen showing a password-visibility control">
+  <figcaption>SBI login — a password-visibility option allows users to check what they have typed.</figcaption>
+</figure>
 
-### 1. Security and usability must work together.
+Of course, one observation does not tell us everything about a banking platform. The purpose isn't to criticize a bank over a single UI detail, but to highlight how seemingly minor design decisions can affect everyday usability.
 
-Strong security is essential, but authentication workflows should protect legitimate users without creating unnecessary obstacles.
+It raises an important question:
 
-### 2. Understand real user behavior.
+Are we paying enough attention to the small details that matter to users?
 
-An NRI who logs in once every two months has different needs from someone who accesses net banking every day. Good UX design considers these usage patterns.
+## What Can We Learn as Software Developers?
 
-### 3. Small details matter.
+### 1. Security and Usability Must Work Together
 
-A password visibility button might seem insignificant, but when it doesn't work, it affects usability and user confidence.
+Strong security is essential, especially in banking. However, authentication workflows should protect legitimate users while minimizing unnecessary friction.
 
-### 4. Test the complete user journey.
+### 2. Understand Real User Behavior
 
-Software testing should go beyond checking individual APIs and features. We should test the entire user journey, from entering credentials to successfully completing a transaction.
+An NRI who accesses net banking once every two months has different usage patterns from someone who logs in every day.
 
-### 5. Customer experience influences customer loyalty.
+Good UX design considers different user scenarios, including infrequent access, forgotten passwords, and account recovery.
 
-Customers don't evaluate software based on its architecture, technology stack, or number of features. They judge it by how easily it helps them accomplish their goals.
+### 3. Small Details Matter
 
-## My takeaway
+A password-visibility control might seem insignificant, but it can improve usability and help users avoid mistakes.
 
-As software developers, architects, and product designers, we should remember that software quality is not just about whether a system works technically. It is also about whether it works well for the people who depend on it.
+Small features can have a surprisingly large impact on the overall experience.
 
-Great software is secure, reliable, intuitive, and respectful of the user's time.
+### 4. Test the Complete User Journey
 
-And sometimes, a tiny button that doesn't work can remind us of a much bigger lesson:
+Software testing should go beyond checking individual APIs and features. We should test the complete user journey, from entering credentials to successfully completing a transaction.
+
+Even simple UI controls deserve functional testing across relevant browsers, devices, and screen sizes.
+
+### 5. Customer Experience Influences Customer Loyalty
+
+Customers don't evaluate software based only on its architecture, technology stack, or number of features. They also judge it by how easily it helps them accomplish their goals.
+
+When everyday interactions become unnecessarily difficult, customers may eventually choose an alternative.
+
+## My Takeaway
+
+As software developers, architects, and product designers, we should remember that software quality isn't just about whether a system works technically. It is also about whether it works well for the people who depend on it.
+
+Great software should be secure, reliable, intuitive, and respectful of the user's time.
+
+And sometimes, a small UI detail can remind us of a much bigger lesson:
 
 Users may never see the complexity behind our software, but they will always feel the quality of the experience we create.
 
