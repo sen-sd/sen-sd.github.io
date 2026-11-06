@@ -16,10 +16,10 @@ Recently, I had a real experience that taught me an important lesson.
 
 <figure>
   <img src="/assets/images/AI_Agent/1.my-work-from-home-envionment.PNG" alt="Home office desk with a Mac Mini, a monitor running Visual Studio Code, keyboard, and mouse">
-  <figcaption>Working from home on the Mac Mini, where the AI coding experiment started.</figcaption>
+  <figcaption>Home work from home on the Mac Mini, where the AI coding experiment started.</figcaption>
 </figure>
 
-I was working from home on my Mac Mini, experimenting with an AI coding agent.
+I was Home work from home on my Mac Mini, experimenting with an AI coding agent.
 
 <figure>
   <img src="/assets/images/AI_Agent/2.AI_Coding%20Post_Icon.png" alt="Comic of an AI coding session: folder access denied, a reset confirmation, and an empty project folder">
