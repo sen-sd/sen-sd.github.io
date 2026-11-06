@@ -14,9 +14,19 @@ Recently, I had a real experience that taught me an important lesson.
 
 ## 📖 The Story
 
+<figure>
+  <img src="/assets/images/AI_Agent/1.my-work-from-home-envionment.PNG" alt="Home office desk with a Mac Mini, a monitor running Visual Studio Code, keyboard, and mouse">
+  <figcaption>Working from home on the Mac Mini, where the AI coding experiment started.</figcaption>
+</figure>
+
 I was working from home on my Mac Mini, experimenting with an AI coding agent.
 
-Initially, everything was smooth. The AI was helping me with my development tasks, and I was impressed by its capabilities.
+<figure>
+  <img src="/assets/images/AI_Agent/2.AI_Coding%20Post_Icon.png" alt="Comic of an AI coding session: folder access denied, a reset confirmation, and an empty project folder">
+  <figcaption>The AI helped write code and run tests. A later reset confirmation deleted the project files.</figcaption>
+</figure>
+
+Initially, everything was smooth. The AI was helping me write code, run tests, and build, and I was impressed by its capabilities.
 
 During the process, the AI requested access to certain folders. I denied access because I wanted to protect my files.
 
@@ -41,7 +51,7 @@ We should never assume that an AI agent will always understand our intentions co
 ## 🛡️ My Solution: Use a Virtual Machine
 
 <figure>
-  <img src="/assets/images/AI_Agent/AI%20Coding%20Safely%20with%20Virtual%20Machines.png" alt="Four-panel story of an AI coding experiment that deletes files, then a safer setup using a virtual machine with snapshots, backups, and isolation">
+  <img src="/assets/images/AI_Agent/3.AI%20Coding%20Safely%20with%20Virtual%20Machines.png" alt="Four-panel story from happy AI coding, to deleted files, to experimenting safely inside a virtual machine">
   <figcaption>Experiment inside a virtual machine so a mistake can be restored instead of deleting files on the main computer.</figcaption>
 </figure>
 
@@ -57,7 +67,7 @@ For example:
 - Maintain Git repositories and independent backups.
 
 <figure>
-  <img src="/assets/images/AI_Agent/windows-hyper-v-architecture.jpg" alt="Windows Hyper-V architecture with a Windows host parent partition and an Ubuntu virtual machine child partition above the hypervisor">
+  <img src="/assets/images/AI_Agent/4.windows-hyper-v-architecture.jpg" alt="Windows Hyper-V architecture with a Windows host parent partition and an Ubuntu virtual machine child partition above the hypervisor">
   <figcaption>On Windows, Hyper-V runs the Ubuntu VM beside the host, above the hypervisor. Personal files stay on the host.</figcaption>
 </figure>
 
