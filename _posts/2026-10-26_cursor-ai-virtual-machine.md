@@ -1,46 +1,80 @@
 ---
-title: "My Experience with Cursor AI"
+title: "AI Agents Are Powerful — But Be Careful!"
 category: insights
 date: 2026-10-26
-excerpt: "After files disappeared on my Mac mini during a Cursor AI experiment, I started running those experiments inside an Ubuntu virtual machine I can restore from a snapshot."
-readTime: 4
+excerpt: "An AI coding agent deleted project files on my Mac Mini. The lesson was to experiment inside a virtual machine, with snapshots and backups, instead of on the main operating system."
+readTime: 5
 ---
 
-I use Cursor AI for my hobby projects and to experiment with new technologies. One day, I suddenly discovered that files on my Mac mini had been deleted. It was a frustrating experience and made me think about how to protect my development environment.
+AI agents are amazing. They can write code, automate tasks, manage files, and significantly improve our productivity.
 
-I usually use this computer for experiments because it does not contain important personal data. However, I started looking for a better solution.
+But are we using them safely?
 
-## My Idea: Use a Virtual Machine
+Recently, I had a real experience that taught me an important lesson.
+
+## 📖 The Story
+
+I was working from home on my Mac Mini, experimenting with an AI coding agent.
+
+Initially, everything was smooth. The AI was helping me with my development tasks, and I was impressed by its capabilities.
+
+During the process, the AI requested access to certain folders. I denied access because I wanted to protect my files.
+
+Later, I asked the AI to perform some operations directly on my project folders.
+
+Things became confusing. The AI struggled to complete the task, and I eventually asked it to reset the project and start again.
+
+Unfortunately, I didn't notice the implications of one confirmation prompt.
+
+**The result? My project files and documents were deleted.**
+
+It was a painful experience, especially because I was experimenting on my primary operating system.
+
+## 💡 What Did I Learn?
+
+The problem wasn't simply the AI. It was also the environment in which I was using it.
+
+AI agents can perform powerful operations, including deleting files, modifying configurations, and executing commands.
+
+We should never assume that an AI agent will always understand our intentions correctly.
+
+## 🛡️ My Solution: Use a Virtual Machine
 
 <figure>
-  <img src="/assets/images/Virtual%20Machine%20AI%20Coding%20Workflow.png" alt="Diagram of a Mac mini running Ubuntu in a virtual machine, with snapshot, experiment, and restore steps">
-  <figcaption>Run AI coding experiments inside an Ubuntu VM, then restore a snapshot if something goes wrong.</figcaption>
+  <img src="/assets/images/AI_Agent/AI%20Coding%20Safely%20with%20Virtual%20Machines.png" alt="Four-panel story of an AI coding experiment that deletes files, then a safer setup using a virtual machine with snapshots, backups, and isolation">
+  <figcaption>Experiment inside a virtual machine so a mistake can be restored instead of deleting files on the main computer.</figcaption>
 </figure>
 
-Instead of running AI coding tools directly on macOS, I can create an Ubuntu virtual machine using VMware Fusion or another VM platform.
+Instead of experimenting directly on your primary operating system, consider creating an isolated development environment.
 
-Inside the VM, I can install all my development tools and run my experiments.
+For example:
 
-The biggest advantage is that if something goes wrong, I can restore the VM from a snapshot or backup instead of rebuilding the entire environment.
+- **Mac:** VMware Fusion or another compatible virtualization solution running Ubuntu or Linux.
+- **Windows:** Hyper-V with Ubuntu or another development OS.
+- Take VM snapshots before major experiments.
+- Keep personal files outside the VM.
+- Avoid unnecessary shared folders and permissions.
+- Maintain Git repositories and independent backups.
 
-## My Proposed Workflow
+<figure>
+  <img src="/assets/images/AI_Agent/windows-hyper-v-architecture.jpg" alt="Windows Hyper-V architecture with a Windows host parent partition and an Ubuntu virtual machine child partition above the hypervisor">
+  <figcaption>On Windows, Hyper-V runs the Ubuntu VM beside the host, above the hypervisor. Personal files stay on the host.</figcaption>
+</figure>
 
-1. Create an Ubuntu VM.
-2. Install the required development tools and AI coding assistant.
-3. Take a snapshot before starting risky experiments.
-4. Run the AI coding experiments inside the VM.
-5. If files are deleted or the environment breaks, restore the snapshot.
+If something goes wrong, you can restore the VM snapshot and continue your experiments.
 
-I will also avoid sharing important macOS folders with the VM, so the AI tools cannot easily access my personal files through shared folders.
+Remember, a VM is an additional layer of protection, not a complete security guarantee. Proper isolation and backups are still essential.
 
-Snapshots are useful for quick recovery, but I will still keep separate backups of important projects.
+## 🚀 Final Thoughts
 
-## Conclusion
+AI agents are transforming software development.
 
-AI coding assistants are powerful tools, but they can also make unexpected changes when executing commands or modifying files.
+They can make us faster, more productive, and more creative.
 
-Rather than avoiding these tools, I believe we should use them in a safer environment.
+But as AI capabilities increase, responsible usage becomes even more important.
 
-For my Mac mini M4, an Ubuntu ARM64 VM running on VMware Fusion looks like a practical option.
+**Give AI only the permissions it needs. Protect your data. Experiment in an isolated environment.**
 
-My approach: Experiment freely, isolate the environment, and restore it whenever something goes wrong.
+AI is powerful — but being careful is even more powerful!
+
+**Tags:** #AI #AIAgents #SoftwareDevelopment #VirtualMachine #CyberSecurity #DevOps #Automation #DeveloperExperience #MacMini
