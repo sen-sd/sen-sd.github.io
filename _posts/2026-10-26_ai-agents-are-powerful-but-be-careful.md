@@ -21,24 +21,49 @@ Recently, I had a real experience that taught me an important lesson.
 
 I was Home work on my Mac Mini, experimenting with an AI coding agent.
 
-<figure>
-  <img src="/assets/images/AI_Agent/2.AI_Coding%20Post_Icon.png" alt="Comic of an AI coding session: folder access denied, a reset confirmation, and an empty project folder">
-  <figcaption>The AI helped write code and run tests. A later reset confirmation deleted the project files.</figcaption>
-</figure>
-
 Initially, everything was smooth. The AI was helping me write code, run tests, and build, and I was impressed by its capabilities.
+
+<figure>
+  <img src="/assets/images/AI_Agent/2.1_ai_coding.png" alt="The AI helping write code, run tests, and build while the developer looks impressed">
+  <figcaption>The AI was helping write code, run tests, and build.</figcaption>
+</figure>
 
 During the process, the AI requested access to certain folders. I denied access because I wanted to protect my files.
 
+<figure>
+  <img src="/assets/images/AI_Agent/2.2_folder_access_denied.png" alt="Denying the AI access to the project folder">
+  <figcaption>The AI requested folder access. Access was denied to protect the files.</figcaption>
+</figure>
+
 Later, I asked the AI to perform some operations directly on my project folders.
 
+<figure>
+  <img src="/assets/images/AI_Agent/2.3_project_folder_operation.png" alt="The AI listing operations on project files, dependencies, and build artifacts">
+  <figcaption>The AI was asked to work directly on the project folders.</figcaption>
+</figure>
+
 Things became confusing. The AI struggled to complete the task, and I eventually asked it to reset the project and start again.
+
+<figure>
+  <img src="/assets/images/AI_Agent/2.4_ai_confusion_reset.png" alt="A reset project confirmation while the task has become confusing">
+  <figcaption>After the AI struggled, the request was to reset the project and start again.</figcaption>
+</figure>
 
 Unfortunately, I didn't notice the implications of one confirmation prompt.
 
 **The result? My project files and documents were deleted.**
 
+<figure>
+  <img src="/assets/images/AI_Agent/2.5_confirmation_files_deleted.png" alt="Shock after a confirmation prompt left the project folder empty">
+  <figcaption>One confirmation prompt deleted the project files and documents.</figcaption>
+</figure>
+
 It was a painful experience, especially because I was experimenting on my primary operating system.
+
+<figure>
+  <img src="/assets/images/AI_Agent/2.6_painful_experience.png" alt="The developer regretting the experiment on the primary operating system">
+  <figcaption>The experiment was on the primary operating system, so the loss was painful.</figcaption>
+</figure>
 
 ## 💡 What Did I Learn?
 
