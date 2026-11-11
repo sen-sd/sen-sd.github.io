@@ -92,8 +92,8 @@ For example:
 - Maintain Git repositories and independent backups.
 
 <figure>
-  <img src="/assets/images/AI_Agent/4.windows-hyper-v-architecture.jpg" alt="Windows Hyper-V architecture with a Windows host parent partition and an Ubuntu virtual machine child partition above the hypervisor">
-  <figcaption>On Windows, Hyper-V runs the Ubuntu VM beside the host, above the hypervisor. Personal files stay on the host.</figcaption>
+  <img src="/assets/images/AI_Agent/5.vm-setup-environment.png" alt="VM setup: Ubuntu Desktop on Hyper-V for a Windows 11 Pro PC, and Ubuntu Desktop ARM64 on VMware Fusion for a Mac mini M4. AI agents run only inside Ubuntu.">
+  <figcaption>AI agents run only inside Ubuntu. On a Windows 11 Pro PC that VM sits on Hyper-V. On the Mac mini M4 it sits on VMware Fusion, and daily work stays on macOS.</figcaption>
 </figure>
 
 If something goes wrong, you can restore the VM snapshot and continue your experiments.
