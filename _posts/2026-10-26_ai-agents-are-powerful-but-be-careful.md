@@ -75,11 +75,6 @@ We should never assume that an AI agent will always understand our intentions co
 
 ## 🛡️ My Solution: Use a Virtual Machine
 
-<figure>
-  <img src="/assets/images/AI_Agent/3.AI%20Coding%20Safely%20with%20Virtual%20Machines.png" alt="Four-panel story from happy AI coding, to deleted files, to experimenting safely inside a virtual machine">
-  <figcaption>Experiment inside a virtual machine so a mistake can be restored instead of deleting files on the main computer.</figcaption>
-</figure>
-
 Instead of experimenting directly on your primary operating system, consider creating an isolated development environment.
 
 For example:
