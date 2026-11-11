@@ -15,8 +15,8 @@ Recently, I had a real experience that taught me an important lesson.
 ## 📖 The Story
 
 <figure>
-  <img src="/assets/images/AI_Agent/1.my-work-from-home-envionment.PNG" alt="Home work desk with a Mac Mini, a monitor running Visual Studio Code, keyboard, and mouse">
-  <figcaption>Home work on the Mac Mini, where the AI coding experiment started.</figcaption>
+  <img src="/assets/images/AI_Agent/1.my-work-from-home-envionment.PNG" alt="Home experiment desk with a Mac Mini, a monitor running Visual Studio Code, keyboard, and mouse">
+  <figcaption>Home experiment on the Mac Mini, where the AI coding experiment started.</figcaption>
 </figure>
 
 I was Home work on my Mac Mini, experimenting with an AI coding agent.
